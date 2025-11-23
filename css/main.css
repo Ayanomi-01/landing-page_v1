@@ -1,0 +1,40 @@
+/* Vars */
+:root {
+
+}
+
+/* Main rulus */
+* { 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Work Sans", sans-serif;
+}
+/* END */
+
+/* Responsive */
+
+@media (min-width: 576px) { 
+    .conta {width: 550px;}
+ }
+
+@media (min-width: 768px) { 
+    .conta {width: 750px;}
+ }
+@media (min-width: 992px) { 
+    .conta {width: 970px;}
+ }
+@media (min-width: 1200px) { 
+    .conta {width: 1170px;}
+ }
+@media (min-width: 1400px) { 
+    .conta {width: 1370px;}
+ }
+ /* End Responsive */
+
+ /* Begin Header */
+
+
+ /* End Header */
