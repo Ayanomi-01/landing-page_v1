@@ -268,3 +268,207 @@ body {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Small responsive tweaks (simple and minimal) */
+@media (max-width: 600px) {
+    .header .conta {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .header .conta .links ul {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 12px;
+    }
+
+    .landing {
+        height: auto;
+        padding: 80px 0;
+    }
+}
+
+/* services */
+
+.services .conta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.services .conta .upper-srv h1 {
+    color:#ebeced;
+    margin: 0;
+    padding: 0;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+}
+.services .conta .upper-srv p {
+    color:#797979;
+    font-size: 20px;
+    margin-top: 12px;
+    max-width: 900px;
+    text-align: center;
+}
+.services .conta .lower-srv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+.services .conta .lower-srv p {
+    color: #444;
+    font-weight: 300;
+  line-height: 1.6;
+  font-size: 1.3rem;
+}
+.services .conta .lower-srv i {
+    font-size: 60px;
+    color: var(--main-color);
+}
+
+.services .conta .lower-srv > div {
+    padding: 28px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+.services .conta .lower-srv > div:hover,
+.services .conta .lower-srv > div:focus-within {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+    .services .conta .upper-srv h1 {
+        font-size: clamp(2rem, 7vw, 3rem);
+    }
+    .services .conta .lower-srv {
+        grid-template-columns: 1fr;
+    }
+    .services .conta .lower-srv i {
+        font-size: 48px;
+    }
+}
+
+/* End services */
+/* Portfolio */
+.porto .conta .upper-porto h1 {
+    color:#ebeced;
+    margin: 0;
+    padding: 0;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+}
+.porto {
+    background-color: #f6f6f6;
+    padding-top: 20px;
+}
+.porto .conta .upper-porto p {
+    color:#444;
+    font-size: 20px;
+    margin: 12px auto 0;
+    line-height: 1.6;
+    max-width: 900px;
+    text-align: center;
+
+}
+.porto .conta .lower-porto {text-align: center;}
+.porto .conta .lower-porto p {
+    color: #444;
+    font-weight: 300;
+     line-height: 1.6;
+     font-size: 1.3rem;
+}
+.porto .conta .lower-porto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: stretch;
+}
+.porto .conta .lower-porto .porto-box  {
+    flex: 1 1 300px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+.porto .conta .lower-porto .porto-box img{
+    width:100%;
+    height: auto;
+    display:block;
+}
+
+.porto .conta .lower-porto .porto-box:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+.porto .conta .lower-porto .porto-box img {
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+.porto .conta .lower-porto .porto-box:hover img {
+    transform: scale(1.03);
+    filter: saturate(1.05) contrast(1.02);
+}
+
+@media (max-width: 768px) {
+    .porto .conta .upper-porto h1 { font-size: clamp(2rem, 8vw, 3rem); }
+    .porto .conta .lower-porto { gap: 16px; }
+}
+
+/* End Portfolio */
+
+/* About */
+
+.about {
+    padding-top: 20px;
+}
+.about .conta {
+    display: block;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 36px 20px;
+}
+.about .conta .about-text h2  {
+  color:#ebeced;
+    margin: 0;
+    padding: 0;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+}
+.about .conta .about-text p  {
+    color:#444;
+    font-size: 20px;
+    margin: 12px auto 0;
+    line-height: 1.6;
+    max-width: 900px;
+    text-align: center;
+}
+.about .conta .about {
+     color:#444;
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.6;
+}
+.about .conta .about .about-image img {
+    max-width: 100%;
+}
+
+@media (min-width: 900px) {
+    .about .conta { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
+    .about .conta .about-text { text-align: left; }
+    .about .conta .about-text h2 { text-align: left; }
+    .about .conta .about-text p { text-align: left; margin: 0; }
+}
+
+@media (max-width: 768px) {
+    .about .conta .about-text h2 { font-size: clamp(1.8rem, 8vw, 2.8rem); }
+}
+
+/* End About */
