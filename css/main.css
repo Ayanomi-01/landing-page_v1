@@ -268,7 +268,7 @@ body {
         transition-duration: 0.01ms !important;
     }
 }
-
+git commit -m "Enhance services/portfolio/about responsive styles and hover polish"
 /* Small responsive tweaks (simple and minimal) */
 @media (max-width: 600px) {
     .header .conta {
