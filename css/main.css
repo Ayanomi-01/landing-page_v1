@@ -1,8 +1,8 @@
-
+/* Vars - Enhanced with more modern colors */
 :root {
     --main-color: #0ec9b6;
     --main-color-alt: #0da897;
-    --dark-color: black;
+    --dark-color: #2c3e50;
     --light-bg: #f8f9fa;
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
     --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
@@ -51,27 +51,11 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
+/* Header - Enhanced */
 .header {
     padding: 20px;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background: white;
     box-shadow: var(--shadow-sm);
-    animation: slideDown 0.5s ease-out;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 .header .conta {
@@ -139,11 +123,11 @@ body {
     transform: translateY(-2px);
 }
 
-/* Landing */
+/* Landing - Enhanced */
 .landing {
     background-image: linear-gradient(135deg, rgba(14, 201, 182, 0.15), rgba(44, 62, 80, 0.25)), 
                       url('../images/pexels-photo-355747.jpeg');
-    height: calc(100vh - 90px);
+    height: calc(100vh - 60px);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -236,123 +220,35 @@ body {
     }
 }
 
-/* Feats - Enhanced */
+/* Feats - Simple */
 .feats {
     padding: 80px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.feats::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(14, 201, 182, 0.05) 0%, transparent 70%);
-    animation: rotate 30s linear infinite;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    background-color: #f8f9fa;
+    text-align: center;
 }
 
 .feats .conta {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
-    position: relative;
-    z-index: 1;
 }
 
 .feats .conta > div {
     text-align: center;
     padding: 40px 30px;
-    background: white;
-    border-radius: 16px;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-    animation: fadeInUp 0.6s ease-out both;
-}
-
-.feats .conta > div:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.feats .conta > div:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.feats .conta > div:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-@keyframes fadeInUp {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.feats .conta > div::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(14, 201, 182, 0.1), transparent);
-    transition: left 0.6s ease;
-}
-
-.feats .conta > div:hover::before {
-    left: 100%;
-}
-
-.feats .conta > div:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-md);
 }
 
 .feats .conta i {
     font-size: 3rem;
     color: var(--main-color);
     margin-bottom: 20px;
-    display: inline-block;
-    transition: var(--transition);
-    background: linear-gradient(135deg, var(--main-color), var(--main-color-alt));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.feats .conta > div:hover i {
-    transform: scale(1.15) rotateY(360deg);
 }
 
 .feats .conta h3 {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 20px 0 15px;
     color: var(--dark-color);
-    transition: var(--transition);
-}
-
-.feats .conta > div:hover h3 {
-    color: var(--main-color);
 }
 
 .feats .conta p {
